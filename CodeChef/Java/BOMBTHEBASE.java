@@ -4,8 +4,7 @@ import java.io.*;
 
 class Codechef
 {
-    public static void main (String[] args) throws java.lang
-        .Exception
+    public static void main (String[] args) throws java.lang.Exception
     {
         Scanner scanner = new Scanner(System.in);
         int t = scanner.nextInt(); 
@@ -29,3 +28,4 @@ class Codechef
             System.out.println(ans); 
         }
         scanner.close();
+    }
