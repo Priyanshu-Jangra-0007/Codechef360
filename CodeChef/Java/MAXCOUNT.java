@@ -9,8 +9,7 @@ class Solution {
             freq.put(num, freq.getOrDefault(num, 0) + 1);
         }
         
-        for (Map.Entry<Integer, Integer> entry : freq
-            .entrySet()) {
+        for (Map.Entry<Integer, Integer> entry : freq.entrySet()) {
             int count = entry.getValue();
             int num = entry.getKey();
             
