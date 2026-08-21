@@ -1,24 +1,29 @@
-using System;
 
-public class Test
-{
-    public static void Main()
-    {
-        // your code goes here
-        int t=int.Parse(Console.ReadLine());
-        while(t-->0){
-            int n=int.Parse(Console.ReadLine());
-            long val=1;
-            for(int i=0;i<n;i++){
-                Console.Write(val);
-                if(i<n-1) Console.Write(" ");
-                val=val*(n-1-i)/(i+1);
+        int t = Integer.parseInt(br.readLine());
+        while (t-- > 0) {
+            int n = Integer.parseInt(br.readLine());
+            ArrayList<Long> row = generatePascalsTriangle(n);
+
+            for (long val : row) {
+                output.append(val).append(" ");
             }
-            Console.WriteLine();
+            output.append("\n");
         }
+
+        System.out.print(output);
+    }
+
+    public static ArrayList<Long> generatePascalsTriangle(int n) {
+        ArrayList<Long> row = new ArrayList<>();
+        row.add(1L);
+
+        long prev = 1;
+        for (int i = 1; i < n; i++) {
+            long curr = prev * (n - i) / i;
+            row.add(curr);
+            prev = curr;
+        }
+
+        return row;
     }
 }
-
-val local
-virtual keyword
-volatile keyword
