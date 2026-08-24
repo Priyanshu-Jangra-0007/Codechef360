@@ -17,7 +17,6 @@ class Solution {
                 j++;
             }
         }
-
         int[] ans = new int[result.size()];
         for (int k = 0; k < result.size(); k++) {
             ans[k] = result.get(k);
