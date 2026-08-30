@@ -1,3 +1,7 @@
+    // Function to sort the linked list of 0s, 1s, and 2s
+    public static Node sortList(Node head) {
+        if (head == null || head.next == null) return head;
+
         Node zeroHead = new Node(-1);
         Node oneHead = new Node(-1);
         Node twoHead = new Node(-1);
@@ -25,4 +29,3 @@
         two.next = null;
 
         return zeroHead.next;
-    }
